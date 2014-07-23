@@ -47,7 +47,7 @@ int main( int argc, char** argv )
       printf("]");
   }
   printf("\n]");
-  if (argc > 1) {
+  if (argc > 2) {
       cv::imwrite("opencv.png", drawing); //canny_output);
   }
 }
