@@ -34,21 +34,19 @@ class Crawler
 
     public function getCurl()
     {
-        if (is_null($this->_curl)) {
-            $curl = curl_init();
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_COOKIEFILE, '');
-            curl_setopt($curl, CURLOPT_COOKIESESSION, true);
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_COOKIEFILE, '');
+        curl_setopt($curl, CURLOPT_COOKIESESSION, true);
 
-            curl_setopt($curl, CURLOPT_URL, 'http://luz.tcd.gov.tw/NLPDB2012/');
-            $content = curl_exec($curl);
+        curl_setopt($curl, CURLOPT_URL, 'http://luz.tcd.gov.tw/NLPDB2012/');
+        $content = curl_exec($curl);
 
-            curl_setopt($curl, CURLOPT_URL, 'http://luz.tcd.gov.tw/NLPDB2012/main2.aspx');
-            $content = curl_exec($curl);
+        curl_setopt($curl, CURLOPT_URL, 'http://luz.tcd.gov.tw/NLPDB2012/main2.aspx');
+        $content = curl_exec($curl);
 
-            $this->_curl = $curl;
+        $this->_curl = $curl;
 
-        }
         return $this->_curl;
     }
 
