@@ -28,7 +28,7 @@ int main( int argc, char** argv )
   vector<Vec4i> hierarchy;
 
   Canny( src_gray, canny_output, thresh, thresh*2, 3 );
-  findContours( canny_output, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE, Point(0, 0) );
+  findContours( canny_output, contours, hierarchy, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_NONE, Point(0, 0) );
 
   Mat drawing = Mat::zeros( canny_output.size(), CV_8UC3 );
 
