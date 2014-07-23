@@ -37,8 +37,7 @@ class Crawler
         if (is_null($this->_curl)) {
             $curl = curl_init();
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_COOKIEFILE, 'cookie');
-            curl_setopt($curl, CURLOPT_COOKIEJAR, 'cookie');
+            curl_setopt($curl, CURLOPT_COOKIEFILE, '');
             curl_setopt($curl, CURLOPT_COOKIESESSION, true);
 
             curl_setopt($curl, CURLOPT_URL, 'http://luz.tcd.gov.tw/NLPDB2012/');
@@ -99,8 +98,7 @@ class Crawler
     {
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_COOKIEFILE, 'cookie');
-        curl_setopt($curl, CURLOPT_COOKIEJAR, 'cookie');
+        curl_setopt($curl, CURLOPT_COOKIEFILE, '');
         curl_setopt($curl, CURLOPT_COOKIESESSION, true);
 
         curl_setopt($curl, CURLOPT_URL, 'http://luz.tcd.gov.tw/NLPDB2012/');
