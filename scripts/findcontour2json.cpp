@@ -22,6 +22,7 @@ int main( int argc, char** argv )
   /// Convert image to gray and blur it
   cvtColor( src, src_gray, CV_BGR2GRAY );
   //blur( src_gray, src_gray, Size(3,3) );
+  GaussianBlur(src_gray,src_gray,cv::Size(3,3),0,0);
 
   Mat canny_output;
   vector<vector<Point> > contours;
